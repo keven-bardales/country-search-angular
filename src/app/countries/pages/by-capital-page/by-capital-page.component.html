@@ -1,0 +1,17 @@
+    <h2 class="text-xl font-bold mb-4">By Capital</h2>
+
+        <shared-search-box
+            [initialValue]="initialSearchBoxValue"
+            (onNewSearch)="searchByCapital($event)"
+            placeholder="Search by Capital"
+        ></shared-search-box>
+
+    <hr class="my-4">
+
+    <shared-loading-spinner *ngIf="isLoading" ></shared-loading-spinner>
+
+    <h3 class="text-lg font-bold mb-4">
+        table of results
+    </h3>
+
+        <countriess-country-table [countries]="countries"></countriess-country-table>

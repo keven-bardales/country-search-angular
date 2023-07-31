@@ -1,0 +1,15 @@
+    <h2 class="text-xl font-bold mb-4">By Region Name</h2>
+
+    <div class="mb-4 flex justify-evenly gap-4">
+       <button class="p-3 bg-slate-400 grow rounded-lg" [ngClass]="{'bg-slate-900 text-white': selectedRegion === region}" (click)="searchByRegion(region)" *ngFor="let region of regions">
+        {{region}}
+       </button>
+    </div>
+
+    <hr class="my-4">
+
+    <h3 class="text-lg font-bold mb-4">
+        table of results for selected region: <strong>{{selectedRegion ? selectedRegion : 'No Region Selected yet'}}</strong>
+    </h3>
+
+        <countriess-country-table [countries]="countries"></countriess-country-table>

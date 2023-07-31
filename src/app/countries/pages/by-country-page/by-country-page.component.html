@@ -1,0 +1,17 @@
+    <h2 class="text-xl font-bold mb-4">By Country Name</h2>
+
+    <div class="mb-4">
+        <shared-search-box
+            [initialValue]="initialSearchBoxValue"
+            (onNewSearch)="searchByName($event)"
+            placeholder="Search By Name"
+        ></shared-search-box>
+    </div>
+
+    <hr class="my-4">
+
+    <h3 class="text-lg font-bold mb-4">
+        table of results
+    </h3>
+
+        <countriess-country-table [countries]="countries"></countriess-country-table>
